@@ -10,10 +10,10 @@ class CardListContent extends StatefulWidget {
   const CardListContent({Key? key, this.onCheckboxChanged}) : super(key: key);
 
   @override
-  _CardListContentState createState() => _CardListContentState();
+  CardListContentState createState() => CardListContentState();
 }
 
-class _CardListContentState extends State<CardListContent>
+class CardListContentState extends State<CardListContent>
     with SingleTickerProviderStateMixin {
   bool _isChecked = false;
   late final AnimationController _controller;
@@ -50,15 +50,15 @@ class _CardListContentState extends State<CardListContent>
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 24, sigmaY: 24),
           child: Container(
-            padding: EdgeInsets.only(right: 15),
+            padding: const EdgeInsets.only(right: 15),
             height: 82,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors: [
-                  const Color(0xFF6C6C6C).withOpacity(0.2),
-                  const Color(0x000000).withOpacity(0.2),
+                  Theme.of(context).colorScheme.surface,
+                  Theme.of(context).colorScheme.surfaceVariant,
                 ],
               ),
               borderRadius: BorderRadius.circular(16),
@@ -148,7 +148,7 @@ class CustomCheckbox extends StatelessWidget {
         width: 30,
         height: 30,
         decoration: BoxDecoration(
-          color: value ? Color(0xFFDF5BFF) : Colors.transparent,
+          color: value ? const Color(0xFFDF5BFF) : Colors.transparent,
           borderRadius: BorderRadius.circular(6),
           border: Border.all(
             color: value ? Colors.transparent : Colors.grey,

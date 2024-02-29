@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:prueba_tecnica_1/widgets/module/molecules/grid_item.dart';
 

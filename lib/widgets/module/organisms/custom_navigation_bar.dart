@@ -5,7 +5,6 @@ import 'package:prueba_tecnica_1/widgets/module/molecules/icon_navigation_bar.da
 
 class CustomNavigationBar extends StatefulWidget {
   const CustomNavigationBar({
-    
     super.key,
   });
 
@@ -23,7 +22,6 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
     Text('Chat'),
     Text('Person'),
   ];
-
 
   void _onItemTapped(int index) {
     setState(() {
@@ -57,8 +55,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors: [
-                  const Color(0xFF6C6C6C).withOpacity(0.2),
-                  const Color(0x000000).withOpacity(0.2),
+                  Theme.of(context).colorScheme.surface,
+                  Theme.of(context).colorScheme.surfaceVariant,
                 ],
               ),
               borderRadius: BorderRadius.circular(25),
@@ -70,7 +68,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                   onTap: () => _onItemTapped(index),
                   child: IconNavigationBar(
                     selectedIndex: _selectedIndex == index,
-                    icon: getIcon(index), index: index,
+                    icon: getIcon(index),
+                    index: index,
                   ),
                 );
               }),

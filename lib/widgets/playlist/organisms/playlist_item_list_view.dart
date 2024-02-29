@@ -7,17 +7,17 @@ import 'package:prueba_tecnica_1/widgets/common/atoms/custom_check_box.dart';
 import 'package:prueba_tecnica_1/widgets/common/atoms/icon_label_view.dart';
 import 'package:shimmer/shimmer.dart';
 
-class PlaylistCardListContent extends StatefulWidget {
+class PlaylistItemListView extends StatefulWidget {
   final Function(bool)? onCheckboxChanged;
   final GridItemModel gridItemModel;
-  const PlaylistCardListContent({Key? key, this.onCheckboxChanged, required this.gridItemModel})
+  const PlaylistItemListView({Key? key, this.onCheckboxChanged, required this.gridItemModel})
       : super(key: key);
 
   @override
-  PlaylistCardListContentState createState() => PlaylistCardListContentState();
+  PlaylistItemListViewState createState() => PlaylistItemListViewState();
 }
 
-class PlaylistCardListContentState extends State<PlaylistCardListContent>
+class PlaylistItemListViewState extends State<PlaylistItemListView>
     with SingleTickerProviderStateMixin {
   bool _isChecked = false;
   late final AnimationController _controller;

@@ -16,7 +16,7 @@ class IconLabel extends StatelessWidget {
           color: color,
           size: 16,
         ),
-        SizedBox(width: 5,),
+        const SizedBox(width: 5,),
         Text(
           label,
           style: TextStyle(color: color, fontSize: 12),

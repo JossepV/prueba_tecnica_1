@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prueba_tecnica_1/widgets/playlist/molecules/playlist_select_image_view.dart';
-import 'package:prueba_tecnica_1/widgets/playlist/organisms/playlist_image_preview_view.dart';
+import 'package:prueba_tecnica_1/widgets/playlist/molecules/playlist_image_preview_view.dart';
 
 class PlaylistThumbnailView extends StatefulWidget {
   const PlaylistThumbnailView({super.key});
