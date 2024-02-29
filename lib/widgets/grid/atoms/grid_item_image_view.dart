@@ -32,7 +32,15 @@ class GridItemImageView extends StatelessWidget {
               color: Theme.of(context).colorScheme.surface.withOpacity(0.3),
             ),
           ),
-          errorWidget: (context, url, error) => const Icon(Icons.error),
+          errorWidget: (context, url, error) => Shimmer.fromColors(
+            baseColor: Colors.grey[300]!,
+            highlightColor: Colors.grey[100]!,
+            child: Container(
+              width: 190,
+              height: 220,
+              color: Theme.of(context).colorScheme.surface.withOpacity(0.3),
+            ),
+          ),
         ),
       ),
     );

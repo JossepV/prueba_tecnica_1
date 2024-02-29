@@ -10,7 +10,8 @@ import 'package:shimmer/shimmer.dart';
 class PlaylistItemListView extends StatefulWidget {
   final Function(bool)? onCheckboxChanged;
   final GridItemModel gridItemModel;
-  const PlaylistItemListView({Key? key, this.onCheckboxChanged, required this.gridItemModel})
+  const PlaylistItemListView(
+      {Key? key, this.onCheckboxChanged, required this.gridItemModel})
       : super(key: key);
 
   @override
@@ -84,10 +85,24 @@ class PlaylistItemListViewState extends State<PlaylistItemListView>
                       child: Container(
                         width: 190,
                         height: 220,
-                        color: Theme.of(context).colorScheme.surface.withOpacity(0.3),
+                        color: Theme.of(context)
+                            .colorScheme
+                            .surface
+                            .withOpacity(0.3),
                       ),
                     ),
-                    errorWidget: (context, url, error) => const Icon(Icons.error),
+                    errorWidget: (context, url, error) => Shimmer.fromColors(
+                      baseColor: Colors.grey[300]!,
+                      highlightColor: Colors.grey[100]!,
+                      child: Container(
+                        width: 190,
+                        height: 220,
+                        color: Theme.of(context)
+                            .colorScheme
+                            .surface
+                            .withOpacity(0.3),
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(
